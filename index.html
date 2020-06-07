@@ -929,7 +929,7 @@ Viber , Whats app
 
 <script>
 console.log("2");
-$(document).ready(function() {
+$(function() {
   $("#more-a").click(function() {
     if ($("#more-div").is(":visible")) {
       $("#more-div").hide("slow");
@@ -943,6 +943,11 @@ $(document).ready(function() {
     }
   });
 
+  $("#ap-link").click(function() {
+    elementClick = $(this).attr("href");
+    destination = $(elementClick).offset().top;
+    $("body,html").animate({scrollTop: destination }, 1000);
+  });
 });
 $("#write").click(function() {
   $("#info-h").html("Связаться:");
@@ -955,13 +960,6 @@ $(".more-link").click(function() {
   $(this).hide();
 });
 $(".btn-success").attr("href", "#buy");
-  $("#ap-link").click(function() {
-    elementClick = $(this).attr("href");
-    destination = $(elementClick).offset().top;
-    $("body,html").animate({scrollTop: destination }, 1000);
-    $("body,html").animate({scrollTop: destination }, 1000);
-    $("body,html").animate({scrollTop: destination }, 1000);
-  });
 </script>
 
 <script>
